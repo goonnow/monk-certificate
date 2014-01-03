@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Monk Certificate</title>
+
+  <%= wicked_pdf_stylesheet_link_tag "certificate" -%>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="doc-no">
+            เลขที่ <%= @info[:doc_no] %>/YYYY
+        </div>
+        <div class="center">
+            <img class="logo" src="http://i.i.cbsi.com/cnwk.1d/i/tim/2011/03/08/product_logo_256.png">
+        </div>
+        <div class="address">
+            วัดพระราม ๙ กาญจนาภิเษก<br>
+            ๙๙๙ ซอย ๑๙ ถ.พระราม ๙ ห้วยขวาง<br>
+            กทม. ๑๐๓๑๐ โทร.๐๒-๓๑๘-๕๙๒๙-๗<br>
+            แฟกซ์ ๐๒-๓๑๙-๑๑๒๓
+        </div>
+    <div class="clearfix"></div>
+    </div>
+
+    <div class="center">
+        <b>
+            หนังสือรับรอง <br>
+            การอุปสมบทในพระพุทธศาสนา
+        </b>
+        <div>
+            ด้วยหนังสือฉบับนี้ ขอรับรองว่า
+        </div>
+
+        <div class="name">XXXXX XXXX(XXXX)</div>
+        <div class="basic-info">เกิดวันXX ที่ XX XXXXX พ.ศ. XXXX อายุ XX ปี สูง XXX ซม.</div>
+        <div class="basic-info">สีผิวXXXXX เลขประจำตัวประชาชน X XXXX XXXXX XX X</div>
+
+        <div class="ordain-info">
+            ได้บรรพชา อุปสมบท เป็นพระภิกษุในพระพุทธศาสนา<br>
+            ณ พัทธสีมาวัดพระราม ๙ กาญจนาภิเษก แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร<br>
+            เมื่อวันXXXX ที่ XX XXXXX พ.ศ. XXXX เวลา HH.MM น. โดยมี
+        </div>
+
+        <table class="grand-monk">
+            <tr>
+                <td>พระธรรมบัณฑิต</td>
+                <td>เป็นพระอุปัชณาย์</td>
+            </tr>
+            <tr>
+                <td>พระครูสิริธรรมสาร</td>
+                <td>เป็นพระอนุสาวนาจารย์</td>
+            </tr>
+            <tr>
+                <td>พระครูสมุห์ประทีป</td>
+                <td>เป็นพระอนุสาวนาจารย์</td>
+            </tr>
+        </table>
+
+        <div>
+            สังกัดวัดพระราม ๙ กาญจนาภิเษก บางกะปิ ห้วยขวาง กรุงเทพมหานคร<br>
+            ขอให้มีความเจริญรุ่งเรืองในธรรมเป็นนิจเทอญ
+        </div>
+
+        <div class="issue-date">
+            ให้ไว้ ณ วันที่ XX XXXX พ.ศ. XXXX
+        </div>
+
+        <div class="approve-person">
+            <div class="signature"></div>
+            <div class="info">
+                (XXXXX)<br>
+                XXXXXXXXX
+            </div>
+    </div>
+</body>
+</html>
+
