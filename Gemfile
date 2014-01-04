@@ -26,7 +26,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku'
 gem 'wicked_pdf'
 
 group :doc do
