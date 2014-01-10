@@ -4,31 +4,43 @@
     <form class="pure-form pure-form-aligned" action="/certificate">
     <fieldset>
         <div class="pure-control-group">
-            <label for="no.">Username</label>
-            <input id="name" type="text" placeholder="Username">
+            <label for="cert-no"><%= t('cert_no') %></label>
+            <input id="cert-no" type="text" placeholder="11">
         </div>
 
         <div class="pure-control-group">
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Password">
+            <label for="firstname"><%= t('firstname') %></label>
+            <input id="firstname" type="text" placeholder="<%= t('firstname_placeholder') %>">
         </div>
 
         <div class="pure-control-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Email Address">
+            <label for="surname"><%= t('surname') %></label>
+            <input id="surname" type="text" placeholder="<%= t('surname_placeholder') %>">
         </div>
 
         <div class="pure-control-group">
-            <label for="foo">Supercalifragilistic Label</label>
-            <input id="foo" type="text" placeholder="Enter something here...">
+            <label for="birthdate"><%= t('birthdate') %></label>
+            <input id="birthdate" type="text" placeholder="DD/MM/YYYY">
         </div>
+
+        <div class="pure-control-group">
+            <label for="height"><%= t('height') %>(<%= t('cm') %>)</label>
+            <input id="height" type="text" placeholder="180">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="skin"><%= t('skin') %></label>
+            <input id="skin" type="text" placeholder="<%= t('white') %>">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="ordianed_datetime"><%= t('ordianed_datetime') %></label>
+            <input id="ordianed_datetime" type="text" placeholder="DD/MM/YYYY HH:MM">
+        </div>
+
 
         <div class="pure-controls">
-            <label for="cb" class="pure-checkbox">
-                <input id="cb" type="checkbox"> I've read the terms and conditions
-            </label>
-
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            <button type="submit" class="pure-button pure-button-primary"><%= t('submit') %></button>
         </div>
     </fieldset>
 </form>
