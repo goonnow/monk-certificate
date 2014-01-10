@@ -10,17 +10,9 @@ class ApplicationController < ActionController::Base
         @info = params
 
         render  :pdf => "monk-certificate",
-                :page_size => 'A5',
                 :encoding => 'UTF-8',
                 :show_as_html => ( params[:format] != 'pdf' ),
-                :dpi => '72',
-                :template => 'application/certificate.html.erb',
-                :margin => {
-                    :top    => 0, # default 10 (mm)
-                    :bottom => 0,
-                    :left   => 0,
-                    :right  => 0
-                }
+                :template => 'application/certificate.html.erb'
 
     end
 end
