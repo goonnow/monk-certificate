@@ -1,6 +1,35 @@
-<h1>Monk Certificate</h1>
-<form action="/certificate">
-    name <input type="text" name="name"/> <br>
-    pdf ? <input type="checkbox" name="type" value="pdf"/> <br>
-    <input type="submit" value="submit"/>
+<div class="wrapper">
+    <h1>ใบรับรองพระ</h1>
+
+    <form class="pure-form pure-form-aligned" action="/certificate">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="no.">Username</label>
+            <input id="name" type="text" placeholder="Username">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="Email Address">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="foo">Supercalifragilistic Label</label>
+            <input id="foo" type="text" placeholder="Enter something here...">
+        </div>
+
+        <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I've read the terms and conditions
+            </label>
+
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </div>
+    </fieldset>
 </form>
+</div>
