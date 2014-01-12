@@ -11,12 +11,6 @@ class ApplicationController < ActionController::Base
     def certificate
         @info = params
 
-        #birddate = @info[:birthdate];
-        #@info[:birthdate] = {
-            #:dow => birthdate.strftime('%^a'),
-            #:date => birthdate.strftime('%
-        #}
-
         render  :pdf => "monk-certificate",
                 :encoding => 'UTF-8',
                 :show_as_html => ( params[:format] != 'pdf' ),
