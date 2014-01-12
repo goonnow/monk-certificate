@@ -1,3 +1,5 @@
+require 'date'
+
 class ApplicationController < ActionController::Base
     # Prevent CSRF attacks by raising an exception.
     # For APIs, you may want to use :null_session instead.
@@ -8,6 +10,12 @@ class ApplicationController < ActionController::Base
 
     def certificate
         @info = params
+
+        #birddate = @info[:birthdate];
+        #@info[:birthdate] = {
+            #:dow => birthdate.strftime('%^a'),
+            #:date => birthdate.strftime('%
+        #}
 
         render  :pdf => "monk-certificate",
                 :encoding => 'UTF-8',

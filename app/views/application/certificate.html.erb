@@ -9,7 +9,7 @@
 <body>
     <div class="wrapper">
         <div class="doc-no">
-            เลขที่ <%= @info[:doc_no] %>/YYYY
+            เลขที่ <%= @info[:cert_no] %>/<%= l DateTime.now, format: :year%>
         </div>
         <div class="center">
             <img class="logo" src="http://i.i.cbsi.com/cnwk.1d/i/tim/2011/03/08/product_logo_256.png">
@@ -32,27 +32,27 @@
             ด้วยหนังสือฉบับนี้ ขอรับรองว่า
         </div>
 
-        <div class="name">XXXXX XXXX(XXXX)</div>
-        <div class="basic-info">เกิดวันXX ที่ XX XXXXX พ.ศ. XXXX อายุ XX ปี สูง XXX ซม.</div>
-        <div class="basic-info">สีผิวXXXXX เลขประจำตัวประชาชน X XXXX XXXXX XX X</div>
+        <div class="name">พระ<%= @info[:firstname] %> <%= @info[:monkname] %>(<%= @info[:surname] %>)</div>
+        <div class="basic-info">เกิด<%= l Date.parse(@info[:birthdate]), format: :default %> อายุ <%= l Date.parse(@info[:birthdate]), format: :age %> ปี สูง <%= @info[:height] %> ซม.</div>
+        <div class="basic-info">สีผิว<%= @info[:skin] %> เลขประจำตัวประชาชน <%= @info[:id_no] %></div>
 
         <div class="ordain-info">
             ได้บรรพชา อุปสมบท เป็นพระภิกษุในพระพุทธศาสนา<br>
             ณ พัทธสีมาวัดพระราม ๙ กาญจนาภิเษก แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร<br>
-            เมื่อวันXXXX ที่ XX XXXXX พ.ศ. XXXX เวลา HH.MM น. โดยมี
+            เมื่อ<%= l DateTime.strptime(@info[:ordianed_datetime],'%Y-%m-%d %H:%M'), format: :default %> โดยมี
         </div>
 
         <table class="grand-monk">
             <tr>
-                <td>พระธรรมบัณฑิต</td>
+                <td><%= @info[:lord_monk] %></td>
                 <td>เป็นพระอุปัชณาย์</td>
             </tr>
             <tr>
-                <td>พระครูสิริธรรมสาร</td>
+                <td><%= @info[:pair_monk_1] %></td>
                 <td>เป็นพระอนุสาวนาจารย์</td>
             </tr>
             <tr>
-                <td>พระครูสมุห์ประทีป</td>
+                <td><%= @info[:pair_monk_2] %></td>
                 <td>เป็นพระอนุสาวนาจารย์</td>
             </tr>
         </table>
@@ -63,14 +63,14 @@
         </div>
 
         <div class="issue-date">
-            ให้ไว้ ณ วันที่ XX XXXX พ.ศ. XXXX
+            ให้ไว้ ณ <%= l Time.now, format: :short %>
         </div>
 
         <div class="approve-person">
             <div class="signature"></div>
             <div class="info">
-                (XXXXX)<br>
-                XXXXXXXXX
+                (<%= @info[:approval_name] %>)<br>
+                <%= @info[:approval_position] %>
             </div>
     </div>
 </body>

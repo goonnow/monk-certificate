@@ -5,39 +5,73 @@
     <fieldset>
         <div class="pure-control-group">
             <label for="cert-no"><%= t('cert_no') %></label>
-            <input id="cert-no" type="text" placeholder="11">
+            <input id="cert-no" type="text" placeholder="11" name="cert_no">
         </div>
 
         <div class="pure-control-group">
             <label for="firstname"><%= t('firstname') %></label>
-            <input id="firstname" type="text" placeholder="<%= t('firstname_placeholder') %>">
+            <input id="firstname" type="text" placeholder="<%= t('firstname_placeholder') %>" name="firstname">
         </div>
 
         <div class="pure-control-group">
             <label for="surname"><%= t('surname') %></label>
-            <input id="surname" type="text" placeholder="<%= t('surname_placeholder') %>">
+            <input id="surname" type="text" placeholder="<%= t('surname_placeholder') %>" name="surname">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="monkname"><%= t('monkname') %></label>
+            <input id="monkname" type="text" placeholder="<%= t('monkname_placeholder') %>" name="monkname">
         </div>
 
         <div class="pure-control-group">
             <label for="birthdate"><%= t('birthdate') %></label>
-            <input id="birthdate" type="text" placeholder="DD/MM/YYYY">
+            <input id="birthdate" type="text" placeholder="YYYY-MM-DD" name="birthdate">
         </div>
 
         <div class="pure-control-group">
             <label for="height"><%= t('height') %>(<%= t('cm') %>)</label>
-            <input id="height" type="text" placeholder="180">
+            <input id="height" type="text" placeholder="180" name="height">
         </div>
 
         <div class="pure-control-group">
             <label for="skin"><%= t('skin') %></label>
-            <input id="skin" type="text" placeholder="<%= t('white') %>">
+            <input id="skin" type="text" placeholder="<%= t('white') %>" name="skin">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="id_no"><%= t('id_no') %></label>
+            <input id="id_no" type="text" placeholder="1-2234-00011-32-1" name="id_no">
         </div>
 
         <div class="pure-control-group">
             <label for="ordianed_datetime"><%= t('ordianed_datetime') %></label>
-            <input id="ordianed_datetime" type="text" placeholder="DD/MM/YYYY HH:MM">
+            <input id="ordianed_datetime" type="text" placeholder="YYYY-MM-DD HH:MM" name="ordianed_datetime">
         </div>
 
+        <div class="pure-control-group">
+            <label for="lord_monk"><%= t('lord_monk') %></label>
+            <input id="lord_monk" type="text" name="lord_monk" value="พระธรรมบัณฑิต">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="pair_monk_1"><%= t('pair_monk') %></label>
+            <input id="pair_monk_1" type="text" name="pair_monk_1" value="พระครูสิริธรรมสาร">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="pair_monk_2"><%= t('pair_monk') %></label>
+            <input id="pair_monk_2" type="text" name="pair_monk_2" value="พระครูสมุห์ประทีป">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="approval_name"><%= t('approval_name') %></label>
+            <input id="approval_name" type="text" name="approval_name" value="พระธรรมบัณฑิต">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="approval_position"><%= t('approval_position') %></label>
+            <input id="approval_position" type="text" name="approval_position" value="เจ้าอาวาสวัดพระราม ๙ กาญจนาภิเษก">
+        </div>
 
         <div class="pure-controls">
             <button type="submit" class="pure-button pure-button-primary"><%= t('submit') %></button>

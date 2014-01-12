@@ -14,3 +14,7 @@
 .wrapper {
     text-align: center;
 }
+
+input {
+    padding: 10px !important;
+}
