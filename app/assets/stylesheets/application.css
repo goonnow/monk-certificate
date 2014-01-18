@@ -18,3 +18,7 @@
 input {
     padding: 10px !important;
 }
+
+input.shorter {
+    width: 80px;
+}
