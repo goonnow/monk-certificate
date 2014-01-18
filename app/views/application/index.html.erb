@@ -1,6 +1,8 @@
 <div class="wrapper">
     <h1>ใบรับรองพระ</h1>
 
+    <%= image_tag "temple-logo.png" %>
+    <img src="temple-logo.png"/>
     <form class="pure-form pure-form-aligned" action="/certificate">
     <fieldset>
         <div class="pure-control-group">
@@ -24,8 +26,20 @@
         </div>
 
         <div class="pure-control-group">
-            <label for="birthdate"><%= t('birthdate') %></label>
-            <input id="birthdate" type="text" placeholder="YYYY-MM-DD" name="birthdate">
+            <span>เกิดวันที่</span>
+            <select name="birthdate-date">
+                <% [*1..31].each do |d| %>
+                    <option><%= d =%></option>
+                <% end %>
+            </select>
+            <span>เดือน</span>
+            <select name="birthdate-month">
+                <% [*1..12].each do |d| %>
+                    <option><%= d =%></option>
+                <% end %>
+            </select>
+            <span>พ.ศ.</span>
+            <input id="birthdate" type="text" placeholder="2530" name="birthdate-year">
         </div>
 
         <div class="pure-control-group">
@@ -44,8 +58,24 @@
         </div>
 
         <div class="pure-control-group">
-            <label for="ordianed_datetime"><%= t('ordianed_datetime') %></label>
-            <input id="ordianed_datetime" type="text" placeholder="YYYY-MM-DD HH:MM" name="ordianed_datetime">
+            <span>บวชวันที่</span>
+            <select name="ordained-date">
+                <% [*1..31].each do |d| %>
+                    <option><%= d =%></option>
+                <% end %>
+            </select>
+            <span>เดือน</span>
+            <select name="ordained-month">
+                <% [*1..12].each do |d| %>
+                    <option><%= d =%></option>
+                <% end %>
+            </select>
+            <span>พ.ศ.</span>
+            <input type="text" placeholder="2556" name="ordained-year">
+            <span>เวลา</span>
+            <input type="text" placeholder="15" name="ordained-hour">
+            <span>:</span>
+            <input type="text" placeholder="30" name="ordained-minues">
         </div>
 
         <div class="pure-control-group">

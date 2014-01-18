@@ -12,7 +12,7 @@
             เลขที่ <%= @info[:cert_no] %>/<%= l DateTime.now, format: :year%>
         </div>
         <div class="center">
-            <img class="logo" src="http://i.i.cbsi.com/cnwk.1d/i/tim/2011/03/08/product_logo_256.png">
+            <%= wicked_pdf_image_tag "temple-logo.png" %>
         </div>
         <div class="address">
             วัดพระราม ๙ กาญจนาภิเษก<br>
@@ -39,7 +39,7 @@
         <div class="ordain-info">
             ได้บรรพชา อุปสมบท เป็นพระภิกษุในพระพุทธศาสนา<br>
             ณ พัทธสีมาวัดพระราม ๙ กาญจนาภิเษก แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร<br>
-            เมื่อ<%= l DateTime.strptime(@info[:ordianed_datetime],'%Y-%m-%d %H:%M'), format: :default %> โดยมี
+            เมื่อ<%= l DateTime.strptime(@info[:ordained_datetime],'%Y-%m-%d %H:%M'), format: :default %> โดยมี
         </div>
 
         <table class="grand-monk">
