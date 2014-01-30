@@ -10,15 +10,3 @@
  *
  *= require_self
  */
-
-.wrapper {
-    text-align: center;
-}
-
-input {
-    padding: 10px !important;
-}
-
-input.shorter {
-    width: 80px;
-}

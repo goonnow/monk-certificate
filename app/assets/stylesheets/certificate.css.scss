@@ -1,0 +1,120 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidserifthai.css);
+
+body {
+    margin: 0px;
+    height: auto;
+    width: 297mm;
+    font-family: 'Droid Serif Thai';
+    font-size: 14px;
+}
+
+b {
+    font-weight: bolder;
+}
+
+.page {
+    height: 210mm;
+    width: 297mm;
+    clear: both;
+    display: block;
+    page-break-after: auto;
+    overflow: hidden;
+}
+.wrapper {
+    $padding: 8mm;
+    height: 210mm - 2*$padding;
+    width: 148.5mm - 2*$padding;
+    padding: $padding;
+    margin: 0px;
+    float: left;
+    position: relative;
+}
+
+.border {
+    height: 200mm;
+    width: 148.5mm;
+    position: absolute;
+    border-right: 1px solid black;
+    right:0px;
+    top: -5px;
+}
+
+.certificate {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.header {
+    font-size: 16px;
+}
+
+.logo {
+    width: 25mm;
+    height: 25mm;
+}
+
+.content {
+    margin-top: 10mm;
+}
+
+.doc-no {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+}
+.address {
+    position: absolute;
+    right: 0;
+    top: 4mm;
+    font-size: 12px;
+}
+
+.profile-image {
+    position: absolute;
+    height: 40mm;
+    width: 33mm;
+    border: 0.25mm solid black;
+    left: 0;
+    top: 15mm;
+}
+
+.name {
+    font-weight: bold;
+    margin: 12mm 0 5mm 0;
+}
+
+.ordain-info {
+    margin: 8mm 0 8mm 0;
+}
+
+.grand-monk {
+    font-size: 14px;
+    margin: 8mm 20%;
+    width: 100%;
+    font-weight: bold;
+}
+
+.issue-date {
+    margin: 8mm 0 0 0;
+}
+
+.approve-person .signature {
+    height: 18mm;
+}
+
+.approve-person .info {
+    font-weight: bold;
+}
+
+

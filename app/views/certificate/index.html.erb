@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Monk Certificate</title>
+  <meta charset="UTF-8">
+
+  <%= wicked_pdf_stylesheet_link_tag "certificate" -%>
+
+</head>
+<body>
+<% @monks.each.with_index do |monk, index| %>
+        <% if index % 2 == 0 %>
+            <div class="page">
+        <% end %>
+        <%= render 'certificate', :monk => monk %>
+        <% if index % 2 == 1 %>
+            </div>
+        <% end %>
+    <% end %>
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<div class="wrapper">
+    <div class="border"></div>
+    <div class="certificate">
+        <div class="doc-no">
+            เลขที่ <%= monk[:cert_no] %>/<%= l DateTime.now, format: :year%>
+        </div>
+        <div class="center">
+            <%= wicked_pdf_image_tag "temple-logo.png" %>
+        </div>
+        <div class="address">
+            วัดพระราม ๙ กาญจนาภิเษก<br>
+            ๙๙๙ ซอย ๑๙ ถ.พระราม ๙ ห้วยขวาง<br>
+            กทม. ๑๐๓๑๐ โทร.๐๒-๓๑๘-๕๙๒๙-๗<br>
+            แฟกซ์ ๐๒-๓๑๙-๑๑๒๓
+        </div>
+        <img class="profile-image" src="<%= monk.pic.url %>"/>
+        <div class="clearfix"></div>
+
+        <div class="center content">
+            <div class="header">
+                <b>
+                    หนังสือรับรอง <br>
+                    การอุปสมบทในพระพุทธศาสนา
+                </b>
+                <div>
+                    ด้วยหนังสือฉบับนี้ ขอรับรองว่า
+                </div>
+            </div>
+
+            <div class="name">พระ<%= monk[:firstname] %> <%= monk[:monkname] %>(<%= monk[:surname] %>)</div>
+            <div class="basic-info">เกิด<%= l monk[:birthdate] - 543.year  %> อายุ <%= l monk[:birthdate] - 543.year, format: :age %> ปี สูง <%= monk[:height] %> ซม.</div>
+            <div class="basic-info">สีผิว<%= monk[:skin] %> เลขประจำตัวประชาชน <%= monk[:id_no] %></div>
+
+            <div class="ordain-info">
+                ได้บรรพชา อุปสมบท เป็นพระภิกษุในพระพุทธศาสนา<br>
+                ณ พัทธสีมาวัดพระราม ๙ กาญจนาภิเษก แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร<br>
+                เมื่อ<%= l monk[:ordained_time] - 543.year, format: :default %> โดยมี
+            </div>
+
+            <table class="grand-monk">
+                <tr>
+                    <td><%= monk[:lord_monk] %></td>
+                    <td>เป็นพระอุปัชณาย์</td>
+                </tr>
+                <tr>
+                    <td><%= monk[:pair_monk_1] %></td>
+                    <td>เป็นพระอนุสาวนาจารย์</td>
+                </tr>
+                <tr>
+                    <td><%= monk[:pair_monk_2] %></td>
+                    <td>เป็นพระอนุสาวนาจารย์</td>
+                </tr>
+            </table>
+
+            <div>
+                สังกัดวัดพระราม ๙ กาญจนาภิเษก บางกะปิ ห้วยขวาง กรุงเทพมหานคร<br>
+                ขอให้มีความเจริญรุ่งเรืองในธรรมเป็นนิจเทอญ
+            </div>
+
+            <div class="issue-date">
+                ให้ไว้ ณ <%= l Time.now, format: :short %>
+            </div>
+
+            <div class="approve-person">
+                <div class="signature"></div>
+                <div class="info">
+                    (<%= monk[:approval_name] %>)<br>
+                    <%= monk[:approval_position] %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

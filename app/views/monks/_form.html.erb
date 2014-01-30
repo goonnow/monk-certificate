@@ -1,0 +1,84 @@
+<div class="wrapper">
+    <%= form_for(@monk,:html => { :multipart => true, :class => "pure-form pure-form-aligned" }  ) do |f| %>
+      <% if @monk.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@monk.errors.count, "error") %> prohibited this monk from being saved:</h2>
+
+          <ul>
+          <% @monk.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    <fieldset>
+
+      <div class="pure-control-group">
+        <%= f.label t(:cert_no) %><br>
+        <%= f.number_field :cert_no %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:firstname) %><br>
+        <%= f.text_field :firstname %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:surname) %><br>
+        <%= f.text_field :surname %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:monkname) %><br>
+        <%= f.text_field :monkname %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:birthdate) %><br>
+        <%= f.date_select :birthdate, { :start_year => Time.now.year - 70 + 543, :end_year => Time.now.year - 20 + 543 } %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:height) %><br>
+        <%= f.text_field :height %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:skin) %><br>
+        <%= f.text_field :skin %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:id_no) %><br>
+        <%= f.text_field :id_no %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:ordained_time) %><br>
+        <%= f.datetime_select :ordained_time, { :start_year => Time.now.year - 1 + 543, :end_year => Time.now.year+ 543, default: Time.now  + 543.year} %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:ordainer) %><br>
+        <%= f.text_field :ordainer %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:pair_monk) %><br>
+        <%= f.text_field :pair_monk_1 %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:pair_monk) %><br>
+        <%= f.text_field :pair_monk_2 %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:approval_name) %><br>
+        <%= f.text_field :approval_name %>
+      </div>
+      <div class="pure-control-group">
+        <%= f.label t(:approval_position) %><br>
+        <%= f.text_field :approval_position %>
+      </div>
+
+      <div class="pure-control-group">
+        <%= f.file_field :pic %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </fieldset>
+      
+    <% end %>
+</div

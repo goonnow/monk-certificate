@@ -30,16 +30,20 @@ th:
     birthdate: "วันเกิด"
     height: "ความสูง"
     skin: "สีผิว"
-    ordianed_datetime: "วันเวลาที่บวช"
+    ordained_time: "วันเวลาบวช"
     white: "ขาว"
     cm : "ซม."
     submit: "สร้าง"
-    lord_monk: "พระอุปัชณาย์"
+    ordainer: "พระอุปัชณาย์"
     pair_monk: "พระอนุสาวนาจารย์"
     approval_name: "ผู้อนุมัติ"
     approval_position: "ตำแหน่ง"
     id_no: "เลขประจำตัวประชาชน"
     date:
+        order:
+            - :day
+            - :month
+            - :year
         day_names:
             - อาทิตย์
             - จันทร์
