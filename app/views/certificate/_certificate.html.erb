@@ -18,16 +18,14 @@
 
         <div class="center content">
             <div class="header">
-                <b>
+                <div class="bold">
                     หนังสือรับรอง <br>
-                    การอุปสมบทในพระพุทธศาสนา
-                </b>
-                <div>
+                    การอุปสมบทในพระพุทธศาสนา<br>
                     ด้วยหนังสือฉบับนี้ ขอรับรองว่า
                 </div>
             </div>
 
-            <div class="name">พระ<%= monk[:firstname] %> <%= monk[:monkname] %>(<%= monk[:surname] %>)</div>
+            <div class="name bold">พระ<%= monk[:firstname] %> <%= monk[:monkname] %>(<%= monk[:surname] %>)</div>
             <div class="basic-info">เกิด<%= l monk[:birthdate] - 543.year  %> อายุ <%= l monk[:birthdate] - 543.year, format: :age %> ปี สูง <%= monk[:height] %> ซม.</div>
             <div class="basic-info">สีผิว<%= monk[:skin] %> เลขประจำตัวประชาชน <%= monk[:id_no] %></div>
 
@@ -37,7 +35,7 @@
                 เมื่อ<%= l monk[:ordained_time] - 543.year, format: :default %> โดยมี
             </div>
 
-            <table class="grand-monk">
+            <table class="grand-monk bold">
                 <tr>
                     <td><%= monk[:lord_monk] %></td>
                     <td>เป็นพระอุปัชณาย์</td>
@@ -61,7 +59,7 @@
                 ให้ไว้ ณ <%= l Time.now, format: :short %>
             </div>
 
-            <div class="approve-person">
+            <div class="approve-person bold">
                 <div class="signature"></div>
                 <div class="info">
                     (<%= monk[:approval_name] %>)<br>
