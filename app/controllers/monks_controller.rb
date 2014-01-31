@@ -28,7 +28,7 @@ class MonksController < ApplicationController
 
     respond_to do |format|
       if @monk.save
-        format.html { redirect_to @monk, notice: 'Monk was successfully created.' }
+        format.html { redirect_to '/', notice: 'Monk was successfully created.' }
         format.json { render action: 'show', status: :created, location: @monk }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class MonksController < ApplicationController
   def update
     respond_to do |format|
       if @monk.update(monk_params)
-        format.html { redirect_to @monk, notice: 'Monk was successfully updated.' }
+        format.html { redirect_to '/', notice: 'Monk was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
