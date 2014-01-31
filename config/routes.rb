@@ -1,15 +1,14 @@
 MonkCertificate::Application.routes.draw do
-  resources :monks
+    resources :monks
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-    resources :users
   # You can have the root of your site routed with "root"
-    root 'application#index'
 
     get 'certificate' => 'certificate#index'
-    #get 'certificate' => 'application#certificate'
+
+    root 'monks#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

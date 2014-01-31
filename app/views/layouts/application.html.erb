@@ -11,7 +11,32 @@
     </head>
     <body>
 
-    <%= yield %>
 
+        <div id="layout" class="pure-g">
+            <div class="sidebar pure-u-1 pure-u-med-1-4">
+                <div class="header">
+                    <hgroup>
+                        <h1 class="brand-title">วัดพระราม ๙</h1>
+                        <h2 class="brand-tagline">แบบฟอร์มรับรองพระภิกษุ</h2>
+
+                        <%= button_to "สร้าง", new_monk_path, :class => "pure-button pure-button-primary", :method => "get", :type => "button" %>
+                    </hgroup>
+                </div>
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li><a href="http://purecss.io/">Theme by Pure</a></li>
+                            <li><a href="http://goonnow.github.io">&#169; 2014 By Pattarawat Chormai</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content pure-u-1 pure-u-med-3-4">
+                <div>
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,40 +1,34 @@
-<h1>Listing monks</h1>
+<div>
+    <form action="/certificate" method="get">
+        <h1 class="content-subhead">
+            <input class="pure-button pure-button-primary" type="submit" value="พิมพ์"/>
+        </h1>
+        <table class="pure-table pure-table-horizontal">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>เลขที่ใบรับรอง</th>
+              <th>รูปถ่าย</th>
+              <th>ชื่อ-นามสกุล</th>
+              <th>ฉายา</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-<form action="/certificate" method="get">
-    <input type="submit" value="Print"/>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>ID</th>
-          <th>Pic</th>
-          <th>Cert no</th>
-          <th>Name</th>
-          <th>Monkname</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @monks.each do |monk| %>
-          <tr>
-            <td><input type="checkbox" value="<%= monk.id %>" name="ids[]"/></td>
-            <td><%= monk.id %></td>
-            <td><%= image_tag monk.pic.url %></td>
-            <td><%= monk.cert_no %></td>
-            <td><%= monk.firstname %> <%= monk.surname %></td>
-            <td><%= monk.monkname %></td>
-            <td><%= link_to 'Show', monk %></td>
-            <td><%= link_to 'Edit', edit_monk_path(monk) %></td>
-            <td><%= link_to 'Destroy', monk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-</form>
-
-<br>
-
-<%= link_to 'New Monk', new_monk_path %>
+          <tbody>
+            <% @monks.each do |monk| %>
+              <tr>
+                <td><input type="checkbox" value="<%= monk.id %>" name="ids[]"/></td>
+                <td><%= monk.cert_no %></td>
+                <td><%= image_tag monk.pic.url(:thumb) %></td>
+                <td><%= monk.firstname %> <%= monk.surname %></td>
+                <td><%= monk.monkname %></td>
+                <td><%= link_to 'แก้ไข', edit_monk_path(monk) %></td>
+                <td><%= link_to 'ลบ', monk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </form><br>
+</div>

@@ -12,73 +12,77 @@
         </div>
       <% end %>
 
+    <fieldset class="has-border">
+          <div class="pure-control-group">
+            <%= f.label t(:cert_no) %>
+            <%= f.number_field :cert_no %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:firstname) %>
+            <%= f.text_field :firstname %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:surname) %>
+            <%= f.text_field :surname %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:monkname) %>
+            <%= f.text_field :monkname %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:birthdate) %>
+            <%= f.date_select :birthdate, { :start_year => Time.now.year - 70 + 543, :end_year => Time.now.year - 20 + 543 } %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:height) %>
+            <%= f.text_field :height %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:skin) %>
+            <%= f.text_field :skin %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:id_no) %>
+            <%= f.text_field :id_no %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:ordained_time) %>
+            <%= f.datetime_select :ordained_time, { :start_year => Time.now.year - 1 + 543, :end_year => Time.now.year+ 543, default: Time.now  + 543.year} %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:ordainer) %>
+            <%= f.text_field :ordainer %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:pair_monk) %>
+            <%= f.text_field :pair_monk_1 %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:pair_monk) %>
+            <%= f.text_field :pair_monk_2 %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:approval_name) %>
+            <%= f.text_field :approval_name %>
+          </div>
+          <div class="pure-control-group">
+            <%= f.label t(:approval_position) %>
+            <%= f.text_field :approval_position %>
+          </div>
+
+    </fieldset>
     <fieldset>
-
       <div class="pure-control-group">
-        <%= f.label t(:cert_no) %><br>
-        <%= f.number_field :cert_no %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:firstname) %><br>
-        <%= f.text_field :firstname %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:surname) %><br>
-        <%= f.text_field :surname %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:monkname) %><br>
-        <%= f.text_field :monkname %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:birthdate) %><br>
-        <%= f.date_select :birthdate, { :start_year => Time.now.year - 70 + 543, :end_year => Time.now.year - 20 + 543 } %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:height) %><br>
-        <%= f.text_field :height %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:skin) %><br>
-        <%= f.text_field :skin %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:id_no) %><br>
-        <%= f.text_field :id_no %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:ordained_time) %><br>
-        <%= f.datetime_select :ordained_time, { :start_year => Time.now.year - 1 + 543, :end_year => Time.now.year+ 543, default: Time.now  + 543.year} %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:ordainer) %><br>
-        <%= f.text_field :ordainer %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:pair_monk) %><br>
-        <%= f.text_field :pair_monk_1 %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:pair_monk) %><br>
-        <%= f.text_field :pair_monk_2 %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:approval_name) %><br>
-        <%= f.text_field :approval_name %>
-      </div>
-      <div class="pure-control-group">
-        <%= f.label t(:approval_position) %><br>
-        <%= f.text_field :approval_position %>
-      </div>
-
-      <div class="pure-control-group">
-        <%= f.file_field :pic %>
+            <div class="center">
+                <img src="<%= @monk.pic.url(:thumb) %>"/>
+            </div>
+            <%= f.label 'รูป'%>
+            <%= f.file_field :pic %>
       </div>
 
       <div class="actions">
-        <%= f.submit %>
+          <%= f.submit :class =>"pure-button pure-button-primary" ,:value=>"เสร็จสิ้น" %>
       </div>
     </fieldset>
-      
     <% end %>
 </div

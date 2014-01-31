@@ -9,4 +9,19 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require pure-extend
+ *= require monks
  */
+
+.pure-button {
+    font-size: 110%;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
