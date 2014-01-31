@@ -7,7 +7,7 @@ class CertificateController < ApplicationController
             @monks.push monk
         end
         render  :pdf => "monk-certificate",
-                :show_as_html => ( params[:format] != 'pdf' ),
+                :show_as_html => params[:debug],
                 :encoding => 'UTF-8',
                 :orientation                    => 'Landscape',
                 :template => 'certificate/index.html.erb',
