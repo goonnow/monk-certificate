@@ -69,6 +69,6 @@ class MonksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def monk_params
-      params.require(:monk).permit(:cert_no, :firstname, :surname, :monkname, :birthdate, :height, :skin, :ordained_time, :ordainer, :pair_monk_1, :pair_monk_2, :approval_name, :approval_position, :pic, :id_no)
+      params.require(:monk).permit(:cert_no, :firstname, :surname, :monkname, :birthdate, :height, :skin, :ordained_time, :ordainer, :pair_monk_1, :pair_monk_2, :approval_name, :approval_position, :pic, :id_no, :ordained_date )
     end
 end

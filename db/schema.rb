@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125084603) do
+ActiveRecord::Schema.define(version: 20140207185250) do
 
   create_table "monks", force: true do |t|
     t.integer  "cert_no"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140125084603) do
     t.date     "birthdate"
     t.float    "height"
     t.string   "skin"
-    t.datetime "ordained_time"
+    t.datetime "time"
     t.string   "ordainer"
     t.string   "pair_monk_1"
     t.string   "pair_monk_2"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20140125084603) do
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
     t.string   "id_no"
+    t.date     "ordained_date"
+    t.time     "ordained_time"
   end
 
   create_table "users", force: true do |t|
