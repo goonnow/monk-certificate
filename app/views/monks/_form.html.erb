@@ -47,7 +47,7 @@
           </div>
           <div class="pure-control-group">
             <%= f.label t(:ordained_date) %>
-            <%= f.date_select 'ordained_date', { :start_year => Time.now.year - 1 + 543, :end_year => Time.now.year+ 543, default: Time.now  + 543.year} %>
+            <%= f.date_select :ordained_date, { :start_year => Time.now.year - 1 + 543, :end_year => Time.now.year+ 543, default: Time.now  + 543.year} %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:ordained_time) %>
