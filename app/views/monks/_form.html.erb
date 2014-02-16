@@ -1,3 +1,6 @@
+<%
+   pair_monks = MonkCertificate::Application.config.pair_monks
+%>
 <div class="wrapper">
     <%= form_for(@monk,:html => { :multipart => true, :class => "pure-form pure-form-aligned" }  ) do |f| %>
       <% if @monk.errors.any? %>
@@ -59,29 +62,11 @@
           </div>
           <div class="pure-control-group">
             <%= f.label t(:pair_monk_1) %>
-            <%= f.select :pair_monk_1, options_for_select(
-                [
-                    "พระอรรถกิจโกศล",
-                    "พระราชญาณกวี",
-                    "พระครูปลัดบุญยืน",
-                    "พระครูสังฆรักษ์เชาว์",
-                    "พระครูสิริธรรมสาร",
-                    "พระครูสมุห์ประทีป"
-                ]
-            )%>
+            <%= f.select :pair_monk_1, options_for_select( pair_monks ) %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:pair_monk_2) %>
-            <%= f.select :pair_monk_2, options_for_select(
-                [
-                    "พระอรรถกิจโกศล",
-                    "พระราชญาณกวี",
-                    "พระครูปลัดบุญยืน",
-                    "พระครูสังฆรักษ์เชาว์",
-                    "พระครูสิริธรรมสาร",
-                    "พระครูสมุห์ประทีป"
-                ]
-            )%>
+            <%= f.select :pair_monk_2, options_for_select( pair_monks ) %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:approval_name) %>
