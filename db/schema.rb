@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20140207185250) do
     t.date     "birthdate"
     t.float    "height"
     t.string   "skin"
-    t.datetime "time"
     t.string   "ordainer"
     t.string   "pair_monk_1"
     t.string   "pair_monk_2"
