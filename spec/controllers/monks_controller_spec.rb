@@ -38,14 +38,6 @@ describe MonksController do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested monk as @monk" do
-      monk = Monk.create! valid_attributes
-      get :show, {:id => monk.to_param}, valid_session
-      assigns(:monk).should eq(monk)
-    end
-  end
-
   describe "GET new" do
     it "assigns a new monk as @monk" do
       get :new, {}, valid_session
@@ -77,7 +69,7 @@ describe MonksController do
 
       it "redirects to the created monk" do
         post :create, {:monk => valid_attributes}, valid_session
-        response.should redirect_to(Monk.last)
+        response.should redirect_to('/')
       end
     end
 
@@ -119,7 +111,7 @@ describe MonksController do
       it "redirects to the monk" do
         monk = Monk.create! valid_attributes
         put :update, {:id => monk.to_param, :monk => valid_attributes}, valid_session
-        response.should redirect_to(monk)
+        response.should redirect_to('/')
       end
     end
 

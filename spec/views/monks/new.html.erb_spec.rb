@@ -29,8 +29,8 @@ describe "monks/new" do
       assert_select "input#monk_height[name=?]", "monk[height]"
       assert_select "input#monk_skin[name=?]", "monk[skin]"
       assert_select "input#monk_ordainer[name=?]", "monk[ordainer]"
-      assert_select "input#monk_pair_monk_1[name=?]", "monk[pair_monk_1]"
-      assert_select "input#monk_pair_monk_2[name=?]", "monk[pair_monk_2]"
+      assert_select "select#monk_pair_monk_1[name=?]", "monk[pair_monk_1]"
+      assert_select "select#monk_pair_monk_2[name=?]", "monk[pair_monk_2]"
       assert_select "input#monk_approval_name[name=?]", "monk[approval_name]"
       assert_select "input#monk_approval_position[name=?]", "monk[approval_position]"
     end
