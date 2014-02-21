@@ -1,7 +1,7 @@
 require 'date'
 
 class Monk < ActiveRecord::Base
-    has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+    has_attached_file :pic, :styles => { :thumb => "123.75x150>" }, :default_url => "/images/:style/missing.png"
 
     def ordained_datetime
         d = self.ordained_date

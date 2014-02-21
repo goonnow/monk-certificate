@@ -26,3 +26,11 @@ fieldset {
     text-align: center;
 }
 
+input[type=number], input[type=text].number {
+    width: 15%;
+}
+
+input[type=text].bigger {
+    width: 60%;
+}
+

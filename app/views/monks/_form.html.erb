@@ -18,19 +18,20 @@
     <fieldset class="has-border">
           <div class="pure-control-group">
             <%= f.label t(:cert_no) %>
-            <%= f.number_field :cert_no %>
+            <%= f.number_field :cert_no, :placeholder => "11" %>
+            <span> / 2557</span>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:firstname) %>
-            <%= f.text_field :firstname %>
+            <%= f.text_field :firstname, :placeholder => "สมชาย" %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:surname) %>
-            <%= f.text_field :surname %>
+            <%= f.text_field :surname, :placeholder => "ใจดี" %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:monkname) %>
-            <%= f.text_field :monkname %>
+            <%= f.text_field :monkname, :placeholder => "สุวิชาโน" %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:birthdate) %>
@@ -38,15 +39,16 @@
           </div>
           <div class="pure-control-group">
             <%= f.label t(:height) %>
-            <%= f.text_field :height %>
+            <%= f.text_field :height, :class => "number", :placeholder => "183" %>
+            <span> ซม.</span>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:skin) %>
-            <%= f.text_field :skin %>
+            <%= f.text_field :skin, :placeholder => "ขาว" %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:id_no) %>
-            <%= f.text_field :id_no %>
+            <%= f.text_field :id_no, :placeholder => "1 2423 2323 22 1" %>
           </div>
           <div class="pure-control-group">
             <%= f.label t(:ordained_date) %>
@@ -74,7 +76,7 @@
           </div>
           <div class="pure-control-group">
             <%= f.label t(:approval_position) %>
-            <%= f.text_field :approval_position, :value=> "เจ้าอาวาสวัดพระราม ๙ กาญจนาภิเษก" %>
+            <%= f.text_field :approval_position, :class => "bigger", :value=> "เจ้าอาวาสวัดพระราม ๙ กาญจนาภิเษก" %>
           </div>
 
     </fieldset>
@@ -85,7 +87,7 @@
                     <img src="<%= @monk.pic.url(:thumb) %>"/>
                 </div>
             <% end %>
-            <%= f.label 'รูป'%>
+            <%= f.label 'รูป ( ขนาด 495x600  )'%>
             <%= f.file_field :pic %>
       </div>
 
