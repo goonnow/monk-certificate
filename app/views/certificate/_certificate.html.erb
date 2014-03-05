@@ -26,7 +26,7 @@
             </div>
 
             <div class="name bold">พระ<%= monk[:firstname] %> <%= monk[:monkname] %> ( <%= monk[:surname] %> )</div>
-            <div class="basic-info">เกิด<%= l monk[:birthdate] - 543.year  %> อายุ <%= l monk[:birthdate] - 543.year, format: :age %> ปี สูง <%= monk[:height] %> ซม.</div>
+            <div class="basic-info">เกิด<%= l monk[:birthdate] - 543.year  %> อายุ <%= l monk[:birthdate] - 543.year, format: :age %> ปี สูง <%= monk[:height].round %> ซม.</div>
             <div class="basic-info">สีผิว<%= monk[:skin] %> เลขประจำตัวประชาชน <%= monk[:id_no] %></div>
 
             <div class="ordain-info">
