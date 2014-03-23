@@ -110,12 +110,14 @@ body {
     margin: $box-margin 0 0 0;
 }
 
+
 .approve-person .signature {
     height: 2*$box-margin;
 }
 
 .approve-person .info {
     font-weight: bold;
+    line-height: $font-size;
 }
 
 
