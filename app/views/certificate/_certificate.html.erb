@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper bali-wrapper">
     <div class="border"></div>
     <div class="certificate">
         <div class="doc-no">
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="name bold">พระ<%= monk[:firstname] %> <span class="bali"><%= monk[:monkname] %></span> ( <%= monk[:surname] %> )</div>
+            <div class="name bold">พระ<%= monk[:firstname] %> <span><%= monk[:monkname] %></span> ( <%= monk[:surname] %> )</div>
             <div class="basic-info">เกิด<%= l monk[:birthdate] - 543.year  %> อายุ <%= l monk[:birthdate] - 543.year, format: :age %> ปี สูง <%= monk[:height].round %> ซม.</div>
             <div class="basic-info">สีผิว<%= monk[:skin] %> เลขประจำตัวประชาชน <%= monk[:id_no] %></div>
 

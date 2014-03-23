@@ -1,11 +1,20 @@
 <style>
     @font-face {
         font-family: 'DilleniaUPCplRegular';
-        src: url(<%= asset_data_base64('fonts/_1upcd04/_1upcd04.ttf') %>); format('truetype'),
+        src: url(<%= asset_data_base64('fonts/_1upcd04/_1upcd04.ttf') %>); format('truetype');
+    }
+
+    @font-face {
+        font-family: 'DilleniaUPCplBold';
+        src: url(<%= asset_data_base64('fonts/_1upcd01/_1upcd01.ttf') %>); format('truetype');
     }
 
     .bali {
         font-family: 'DilleniaUPCplRegular';
+    }
+
+    .bali.bold, .bali-wrapper .bold {
+        font-family: 'DilleniaUPCplBold';
     }
 </style>
 
