@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'DilleniaUPCplBold';
+    src: url('_1upcd01.eot');
+    src: url('_1upcd01.eot') format('embedded-opentype'),
+         url('_1upcd01.woff') format('woff'),
+         url('_1upcd01.ttf') format('truetype'),
+         url('_1upcd01.svg#DilleniaUPCplBold') format('svg');
+}
