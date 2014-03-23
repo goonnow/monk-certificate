@@ -23,7 +23,7 @@
                 <td><%= monk.cert_no %></td>
                 <td><%= image_tag monk.pic.url(:thumb) %></td>
                 <td><%= monk.firstname %> <%= monk.surname %></td>
-                <td class="bali bold"><%= monk.monkname %></td>
+                <td class="bali-bold"><%= monk.monkname %></td>
                 <td><%= link_to 'แก้ไข', edit_monk_path(monk) %></td>
                 <td><%= link_to 'ลบ', monk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
