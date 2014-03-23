@@ -9,6 +9,7 @@ body {
     font-family: 'DilleniaUPCplRegular';
     font-size: $font-size;
     letter-spacing: -0.5px;
+    text-rendering: optimize-speed;
 }
 
 
