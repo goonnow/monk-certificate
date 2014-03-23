@@ -1,13 +1,13 @@
 @import url(http://fonts.googleapis.com/earlyaccess/droidserifthai.css);
 
 $font-size: 18px;
+$box-margin: 5mm;
 body {
     margin: 0px;
     height: auto;
     width: 297mm;
     font-family: 'DilleniaUPCplRegular';
     font-size: $font-size;
-    line-height: $font-size+4;
 }
 
 
@@ -90,24 +90,28 @@ body {
 
 .name {
     font-weight: bold;
-    margin: 12mm 0 5mm 0;
+    margin: 2*$box-margin 0 5mm 0;
 }
 
 .ordain-info {
-    margin: 8mm 0 8mm 0;
+    margin: $box-margin 0 $box-margin 0;
 }
 
 .grand-monk {
-    margin: 8mm 20%;
+    margin: $box-margin 20%;
     width: 100%;
+
+    td {
+        line-height: $font-size;
+    }
 }
 
 .issue-date {
-    margin: 8mm 0 0 0;
+    margin: $box-margin 0 0 0;
 }
 
 .approve-person .signature {
-    height: 18mm;
+    height: 2*$box-margin;
 }
 
 .approve-person .info {
