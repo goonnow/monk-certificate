@@ -6,9 +6,12 @@
 - ImageMagick
 
 
+## DB Migration
+REF: http://guides.rubyonrails.org/migrations.html
+
 ## Running test
 ```
-$ rspec
+$ rspec spec
 ```
 
 ## Deploy
