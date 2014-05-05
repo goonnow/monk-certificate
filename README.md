@@ -16,5 +16,5 @@ $ rspec spec
 
 ## Deploy
 ```
-git push origin heroku
+git push heroku master
 ```
