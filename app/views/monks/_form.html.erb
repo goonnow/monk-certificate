@@ -38,15 +38,6 @@
             <%= f.date_select :birthdate, { :start_year => Time.now.year - 70 + 543, :end_year => Time.now.year - 20 + 543 } %>
           </div>
           <div class="pure-control-group">
-            <%= f.label t(:height) %>
-            <%= f.text_field :height, :class => "number", :placeholder => "183" %>
-            <span> ซม.</span>
-          </div>
-          <div class="pure-control-group">
-            <%= f.label t(:skin) %>
-            <%= f.text_field :skin, :placeholder => "ขาว" %>
-          </div>
-          <div class="pure-control-group">
             <%= f.label t(:id_no) %>
             <%= f.text_field :id_no, :placeholder => "1 2423 2323 22 1" %>
           </div>
